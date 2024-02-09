@@ -40,9 +40,12 @@ Messages should be formatted in a clear concise manner. Here are some guidelines
 
 To help ilustrate these guidelines, here are some examples following this standard
 
-**Error Message:** `Error: Failed to compile the kernel. Please check your build configuration.`
-**Warning Message:** `Warning: The current configuration may lead to slower performance.`
-**Information Message:** `Information: The kernel compiled successfully.`
-**Success Message:** `Success: The kernel module was loaded successfully.`
+- **Error Message:** `Error: Failed to compile the kernel. Please check your build configuration.`
+
+- **Warning Message:** `Warning: The current configuration may lead to slower performance.`
+
+- **Information Message:** `Information: The kernel compiled successfully.`
+
+- **Success Message:** `Success: The kernel module was loaded successfully.`
 
 By adhering to this message standard, we can ensure that messages across the FKernel project are consistent, readable the provide value to the user.
