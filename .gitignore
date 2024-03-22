@@ -1,0 +1,7 @@
+.vscode/compile_commands.json
+.xmake/linux/x86_64/cache
+.xmake/ui.log
+.xmake/vscode-build.log
+doxyfile
+logs
+build
