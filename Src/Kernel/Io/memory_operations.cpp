@@ -1,4 +1,4 @@
-#include <Kernel/Io/farpeek_poke.hpp>
+#include <Kernel/Io/memory_operations.hpp>
 
 uint8_t farpeekb(uint16_t segment_selector, void* offset) {
     uint8_t ret;
