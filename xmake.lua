@@ -8,6 +8,8 @@ set_languages("c++23")
 
 local clang_flags = {
   "-g",
+  "-ffreestanding",
+  "-fno-stack-protector",
   "-fno-threadsafe-statics",
   "-fno-exceptions",
   "-fno-rtti"
@@ -31,7 +33,7 @@ toolchain_end()
 target("FKernel")
   set_kind("binary")
   set_default(true)
-  set_filename("FKernel.bin")
+  set_filename("FKernel")
   
   set_warnings(all)
 
