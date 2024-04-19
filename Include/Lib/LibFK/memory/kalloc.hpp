@@ -11,7 +11,7 @@
 
 #define HEAP_SIZE 512 * 1024 // 512KB reserved
 
-extern char heap[HEAP_SIZE];
+extern byte heap[HEAP_SIZE];
 
 struct MemoryBlock{
     size_t size;

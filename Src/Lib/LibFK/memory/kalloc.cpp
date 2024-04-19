@@ -2,7 +2,7 @@
 #include <Lib/LibC/string.h>
 #include <Lib/LibC/stdio.h>
 
-char heap[HEAP_SIZE];
+byte heap[HEAP_SIZE];
 
 byte* allocate_first_fit(size_t size){
     size_t currentOffset = 0;
