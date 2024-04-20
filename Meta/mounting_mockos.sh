@@ -11,7 +11,15 @@ fi
 
 grub_directory="build/mockos/boot/grub"
 grub_config="Config/grub.cfg"
-kernel_binary="build/FKernel.bin"
+kernel_binary=""
+
+if [ -f "build/FKernel.bin" ]; then
+  kernel_binary="build/FKernel.bin"
+fi
+
+if [ -f "build/FKernel" ]; then
+  kernel_binary="build/FKernel"
+fi 
 
 if [ ! -d "$grub_directory" ]; then
   mkdir -p "$grub_directory"
