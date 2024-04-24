@@ -8,6 +8,30 @@ The focus of FKernel is to be built with some [Memory Safety](https://en.wikiped
 
 FKernel is a project to be written in C++, Rust, and Nasm. It aims to be easily customizable using an [SDK](https://en.wikipedia.org/wiki/Software_development_kit) based on Object-Oriented programming, facilitating secure development of [Drivers](https://en.wikipedia.org/wiki/Driver_(software)) and [Modules](https://en.wikipedia.org/wiki/Loadable_kernel_module).
 
+
+## Prerequisites
+
+- [qemu](https://www.qemu.org/)
+- [nasm](https://www.nasm.us/)
+- [clang/llvm](https://llvm.org/)
+- [xmake](https://xmake.io/)
+- [lldb](https://lldb.llvm.org/)
+- [grub](https://www.gnu.org/software/grub/)
+
+
+## Building
+
+```bash
+$ xmake
+```
+and 
+```bash
+$ xmake run
+```
+
+
+
+
 ## Contribution
 
 Contributions are welcome! But this is an opinionated project, so please make sure your changes align with the project's goals and vision. Here are some ways you can contribute:
