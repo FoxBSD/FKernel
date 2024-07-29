@@ -210,7 +210,7 @@ static void doSharp(const char *body); /* process body of # directives */
 ^\#\ *{Number}				{ doSharp(yytext+1);
 					  SAVE_BEGIN;
 					  BEGIN SkipToEOL; }
-^\#					{ perror("illegal # directive");
+^\#					{ YYerror("illegal # directive");
 					  SAVE_BEGIN;
 					  BEGIN SkipToEOL; }
 
