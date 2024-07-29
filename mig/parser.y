@@ -128,6 +128,8 @@
 
 static const char *import_name(statement_kind_t sk);
 
+int yylex(void);
+
 void YYerror(const char *s) {
     error(s);
 }
