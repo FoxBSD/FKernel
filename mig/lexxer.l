@@ -210,7 +210,7 @@ static void doSharp(const char *body); /* process body of # directives */
 ^\#\ *{Number}				{ doSharp(yytext+1);
 					  SAVE_BEGIN;
 					  BEGIN SkipToEOL; }
-^\#					{ YYERROR_CODE("illegal # directive");
+^\#					{ YYerror("illegal # directive");
 					  SAVE_BEGIN;
 					  BEGIN SkipToEOL; }
 
@@ -222,6 +222,10 @@ static void doSharp(const char *body); /* process body of # directives */
 .			{ BEGIN Normal; RETURN(syError); }
 
 %%
+
+int yywrap(){
+    return 1;
+}
 
 extern void
 LookNormal(void)
