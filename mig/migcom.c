@@ -1,25 +1,25 @@
-/* 
+/*
  * Mach Operating System
  * Copyright (c) 1993,1991,1990 Carnegie Mellon University
  * All Rights Reserved.
- * 
+ *
  * Permission to use, copy, modify and distribute this software and its
  * documentation is hereby granted, provided that both the copyright
  * notice and this permission notice appear in all copies of the
  * software, derivative works or modified versions, and any portions
  * thereof, and that both notices appear in supporting documentation.
- * 
- * CARNEGIE MELLON ALLOWS FREE USE OF THIS SOFTWARE IN ITS 
+ *
+ * CARNEGIE MELLON ALLOWS FREE USE OF THIS SOFTWARE IN ITS
  * CONDITION.  CARNEGIE MELLON DISCLAIMS ANY LIABILITY OF ANY KIND FOR
  * ANY DAMAGES WHATSOEVER RESULTING FROM THE USE OF THIS SOFTWARE.
- * 
+ *
  * Carnegie Mellon requests users of this software to return to
- * 
+ *
  *  Software Distribution Coordinator  or  Software.Distribution@CS.CMU.EDU
  *  School of Computer Science
  *  Carnegie Mellon University
  *  Pittsburgh PA 15213-3890
- * 
+ *
  * any improvements or extensions that they make and grant Carnegie the
  * rights to redistribute these changes.
  */
@@ -28,10 +28,10 @@
  *	Switches are;
  *		-[v,Q]  verbose or not quiet:  prints out type
  *			and routine information as mig runs.
- *		-[V,q]  not verbose or quiet : don't print 
+ *		-[V,q]  not verbose or quiet : don't print
  *			information during compilation
  *			(this is the default)
- *		-[r,R]  do or don't use rpc calls instead of 
+ *		-[r,R]  do or don't use rpc calls instead of
  *			send/receive pairs. Default is -r.
  *		-[s,S]	generate symbol table or not:  generate a
  *			table of rpc-name, number, routine triplets
@@ -67,10 +67,11 @@
  *	header.c user.c and server.c are called sequentially. These
  *	do some code generation directly and also call the routines
  *	in utils.c for common (parameterized) code generation.
- *	
+ *
  */
 
 #include <stdio.h>
+#include <stdlib.h>
 
 #include "error.h"
 #include "lexxer.h"
@@ -84,9 +85,9 @@ static void
 parseArgs(int argc, char **argv)
 {
     while (--argc > 0)
-	if ((++argv)[0][0] == '-') 
+	if ((++argv)[0][0] == '-')
 	{
-	    switch (argv[0][1]) 
+	    switch (argv[0][1])
 	    {
 	      case 'q':
 		BeQuiet = TRUE;
