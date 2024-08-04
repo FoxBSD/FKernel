@@ -92,7 +92,7 @@ TARGET_CC = $(CC)
 
 # Compilation flags
 # XXX -I- should be between SRCDIRS and INCDIRS
-ALL_CPPFLAGS	+= -MD $(DEFINES) -I- -I. $(addprefix -I,$(SRCDIRS))
+ALL_CPPFLAGS	+= -m32 -MD $(DEFINES) -iquote- -I. $(addprefix -I,$(SRCDIRS))
 HOST_CPPFLAGS	+= $(ALL_CPPFLAGS) $(addprefix -I,$(HOST_INCDIRS))
 ifeq ($(STDINC),yes) 
 TARGET_CPPFLAGS	+= $(ALL_CPPFLAGS) $(addprefix -I,$(TARGET_INCDIRS)) 
